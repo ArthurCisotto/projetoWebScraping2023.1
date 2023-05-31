@@ -78,3 +78,5 @@ O repositório do frontend pode ser encontrado [aqui](https://github.com/andrebr
 Atualmente a API disponibiliza o recurso de websocket, porém o mesmo não está sendo utilizado no frontend. As requisicões são feitas a cada 1 segundo pelo cliente. O ideal seria utilizar o websocket para que o servidor envie as atualizacões para o cliente, evitando assim o uso desnecessário de recursos.
 
 # Vídeo de Demonstração do Projeto
+
+https://github.com/ArthurCisotto/projetoWebScraping2023.1/assets/80589710/315827b3-1807-4017-9c61-f9475754f6a9
