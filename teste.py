@@ -15,6 +15,9 @@ print("Diretório de dados: ", data_dir)
 img = cv2.imread(data_dir + "IMG_4124.jpg")
 #scale image to fit 'window'
 img = cv2.resize(img, (0,0), fx=0.3, fy=0.3)
+
+img = cv2.convertScaleAbs(img, alpha=2)
+
 # Convert to grayscale
 
 WIDTH = img.shape[1]
@@ -47,7 +50,7 @@ img_rgb = img_cropped.copy()
 cropped_height = img_rgb.shape[0]
 cropped_width = img_rgb.shape[1]
 
-cv2.putText(img_rgb, texto, (int(cropped_width/2), int(cropped_height/2 + 50)), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2)
+cv2.putText(mask, f'Numero identificado: {texto}', (int(cropped_width/2-150), int(cropped_height/2 + 150)), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0,0,0), 2)
 
 
 # Mostra a imagem segmentada

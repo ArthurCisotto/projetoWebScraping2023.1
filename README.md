@@ -27,6 +27,10 @@ Dessa forma, os clientes poderiam visualizar o número da senha atual em tempo r
 
 2. `tira_foto.py` - Este arquivo é responsável pelo código executado no Raspberry Pi. Ele tira fotos do painel de senha a cada segundo e salva as imagens na pasta `pictures`. O código permite que apenas uma foto esteja presente na pasta, para evitar que o espaço seja ocupado por múltiplas imagens. A foto é salva com o nome "image.jpg" e é substituída a cada nova captura. Em seguida, a imagem é enviada para uma API por meio da rota "/upload", onde é realizado um tratamento semelhante ao `teste.py`. A imagem é processada
 
+Imagem original do painel de senha |  Imagem tratada
+:-------------------------:|:-------------------------:
+![](readme_files/original_img.jpg)  |  ![](readme_files/mask.jpg)
+
 # API de Reconhecimento de Dígitos do Painel de Senha do Restaurante do Insper
 
 Esta API foi desenvolvida como parte de um projeto para permitir que os clientes do restaurante do 6° andar do prédio 2 da faculdade Insper possam acompanhar a senha atual sem precisar estar próximo do painel. O objetivo é utilizar técnicas de reconhecimento de dígitos por meio de imagens para extrair as informações do painel de senha, armazená-las em um banco de dados e disponibilizá-las para os clientes. Para a API foi utilizado o framework FastAPI.
@@ -72,3 +76,5 @@ O repositório do frontend pode ser encontrado [aqui](https://github.com/andrebr
 ### Pontos de melhoria
 
 Atualmente a API disponibiliza o recurso de websocket, porém o mesmo não está sendo utilizado no frontend. As requisicões são feitas a cada 1 segundo pelo cliente. O ideal seria utilizar o websocket para que o servidor envie as atualizacões para o cliente, evitando assim o uso desnecessário de recursos.
+
+# Vídeo de Demonstração do Projeto
