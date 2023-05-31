@@ -29,7 +29,7 @@ Dessa forma, os clientes poderiam visualizar o número da senha atual em tempo r
 
 # API de Reconhecimento de Dígitos do Painel de Senha do Restaurante do Insper
 
-Esta API foi desenvolvida como parte de um projeto para permitir que os clientes do restaurante do 6° andar do prédio 2 da faculdade Insper possam acompanhar a senha atual sem precisar estar próximo do painel. O objetivo é utilizar técnicas de reconhecimento de dígitos por meio de imagens para extrair as informações do painel de senha, armazená-las em um banco de dados e disponibilizá-las para os clientes.
+Esta API foi desenvolvida como parte de um projeto para permitir que os clientes do restaurante do 6° andar do prédio 2 da faculdade Insper possam acompanhar a senha atual sem precisar estar próximo do painel. O objetivo é utilizar técnicas de reconhecimento de dígitos por meio de imagens para extrair as informações do painel de senha, armazená-las em um banco de dados e disponibilizá-las para os clientes. Para a API foi utilizado o framework FastAPI.
 
 ## Descrição dos Arquivos
 
@@ -62,3 +62,13 @@ O arquivo `ocr.py` contém a implementação da rota da API relacionada ao recon
 O arquivo `requirements.txt` lista todas as dependências necessárias para executar a API. Essas dependências podem ser instaladas através do comando `pip install -r requirements.txt`.
 
 
+# Frontend
+
+Um frontend foi construído para que os usuários possam acompanhar o último número chamado a partir de um website.
+A stack do frontend é composta por ReactJs, NextJs e TailwindCss.
+
+O repositório do frontend pode ser encontrado [aqui](https://github.com/andrebrito16/queue-sense-frontend).
+
+### Pontos de melhoria
+
+Atualmente a API disponibiliza o recurso de websocket, porém o mesmo não está sendo utilizado no frontend. As requisicões são feitas a cada 1 segundo pelo cliente. O ideal seria utilizar o websocket para que o servidor envie as atualizacões para o cliente, evitando assim o uso desnecessário de recursos.
